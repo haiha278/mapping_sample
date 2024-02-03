@@ -21,5 +21,5 @@ public class Skill {
     private String skill_description;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "skill")
-    private List<Mentor_Skill> mentor_skills;
+    private List<User_Skill> user_skills;
 }

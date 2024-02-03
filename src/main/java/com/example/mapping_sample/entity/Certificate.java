@@ -18,5 +18,5 @@ public class Certificate {
     private String certificate_name;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "certificate")
-    private List<Mentor_Certificate> user_certificates;
+    private List<User_Certificate> user_certificates;
 }

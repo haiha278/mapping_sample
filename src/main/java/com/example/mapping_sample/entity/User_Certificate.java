@@ -4,12 +4,12 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "Mentor_Certificate")
+@Table(name = "User_Certificate")
 @Data
-public class Mentor_Certificate {
+public class User_Certificate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "mentor_certificate_id")
+    @Column(name = "user_certificate_id")
     private Long mentor_certificate_id;
 
     @ManyToOne
@@ -17,8 +17,8 @@ public class Mentor_Certificate {
     private Certificate certificate;
 
     @ManyToOne
-    @JoinColumn(name = "mentor_id", nullable = false)
-    private Mentor mentor;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(name = "certificate_url")
     private String certificate_url;

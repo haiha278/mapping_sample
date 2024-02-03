@@ -37,8 +37,8 @@ public class Course {
     private Integer numbers_of_lesson;
 
     @ManyToOne
-    @JoinColumn(name = "mentor_id")
-    private Mentor mentor;
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "course")
     private List<Video> videos;

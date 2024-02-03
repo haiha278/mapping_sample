@@ -48,6 +48,18 @@ public class User {
     @Column(name = "education_level")
     private String education_level;
 
+    @Column(name = "rating")
+    private Double rating;
+
+    @Column(name = "experience")
+    private double experience;
+
+    @Column(name = "goal")
+    private Double goal;
+
+    @Column(name = "interest")
+    private double interest;
+
     @Column(name = "date_created", nullable = false)
     private LocalDate date_created;
 
@@ -58,13 +70,27 @@ public class User {
     @JoinColumn(name = "role_id")
     private Role role;
 
-    @OneToOne (mappedBy = "user", cascade = CascadeType.MERGE)
-    private Mentor mentor;
-
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
     private List<Report> reports;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
     private List<Mentor_Request> mentor_requests;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<Course> courses;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<User_Certificate> user_certificate_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<User_Skill> user_skill_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<Course_Request> course_request_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<User_Bank_Account> user_bank_account_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<User_Wallet> user_wallet_List;
 }
