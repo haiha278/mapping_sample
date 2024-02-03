@@ -22,9 +22,9 @@ public class Report {
     private String content;
 
     @Column(name = "created_date")
-    private LocalDate created_date;
+    private LocalDate report_created_date;
 
     @Column(name = "last_modified")
-    private LocalDate last_modified;
+    private LocalDate report_last_modified;
 
 }

@@ -25,13 +25,13 @@ public class Course {
     private Double price;
 
     @Column(name = "status")
-    private boolean status;
+    private boolean course_status;
 
     @Column(name = "created_date", nullable = false)
-    private LocalDate created_date;
+    private LocalDate course_created_date;
 
     @Column(name = "rating", nullable = false)
-    private Double rating;
+    private Double course_rating;
 
     @Column(name = "numbers_of_lesson", nullable = false)
     private Integer numbers_of_lesson;

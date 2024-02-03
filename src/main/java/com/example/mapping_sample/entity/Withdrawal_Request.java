@@ -21,8 +21,8 @@ public class Withdrawal_Request {
     private Transaction transaction;
 
     @Column(name = "status")
-    private String status;
+    private String withdrawal_request_status;
 
     @Column(name = "feedback")
-    private String feedback;
+    private String withdrawal_feedback;
 }

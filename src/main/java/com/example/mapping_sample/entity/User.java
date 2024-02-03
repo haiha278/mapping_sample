@@ -109,4 +109,21 @@ public class User {
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
     private List<Withdrawal_Request> withdrawal_request_List;
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user1")
+    private List<Conversation> conversations_of_user_1;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user2")
+    private List<Conversation> conversations_of_user_2;
+
+    @OneToMany(mappedBy = "sender", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Message> sen_tMessages;
+
+    @OneToMany(mappedBy = "receiver", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Message> received_Messages;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user1")
+    private List<Call_Session> call_session_of_user_1;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user2")
+    private List<Call_Session> call_session_of_user_2;
 }

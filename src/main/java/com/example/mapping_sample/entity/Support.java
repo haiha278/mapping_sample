@@ -27,19 +27,19 @@ public class Support {
     private Post post_id;
 
     @Column(name = "status")
-    private String status;
+    private String support_status;
 
     @Column(name = "completion_date")
     private LocalDate completion_date;
 
     @Column(name = "created_date")
-    private LocalDate created_date;
+    private LocalDate support_created_date;
 
     @Column(name = "price")
     private Double price;
 
     @Column(name = "feedback")
-    private String feedback;
+    private String support_feedback;
 
     @Column(name = "rating")
     private Double rating;

@@ -26,7 +26,7 @@ public class Course_Registration {
     private LocalDate date_registrated;
 
     @Column(name = "feed_back")
-    private String feed_back;
+    private String course_registration_feedback;
 
     @OneToOne(mappedBy = "course_registration")
     private Course_Registration_Transaction course_registration_transaction;

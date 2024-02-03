@@ -23,10 +23,10 @@ public class Course_Request {
     private String description;
 
     @Column(name = "status", nullable = false)
-    private boolean status;
+    private boolean course_request_status;
 
     @Column(name = "feedback")
-    private String feedback;
+    private String course_request_feedback;
 
     @Column(name = "demo_source", nullable = false)
     private String demo_source;

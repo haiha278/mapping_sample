@@ -21,7 +21,7 @@ public class Transaction {
     private String transaction_type;
 
     @Column(name = "time_stamp")
-    private LocalDate time_stamp;
+    private LocalDate transaction_time_stamp;
 
     @OneToOne(mappedBy = "transaction")
     private Denomination_Transaction denomination_transaction;

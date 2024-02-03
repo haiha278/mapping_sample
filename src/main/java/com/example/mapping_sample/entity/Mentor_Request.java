@@ -17,9 +17,9 @@ public class Mentor_Request {
     private User user;
 
     @Column(name = "status")
-    private boolean status;
+    private boolean mentor_request_status;
 
     @Column(name = "feedback")
-    private String feedback;
+    private String mentor_request_feedback;
 
 }
