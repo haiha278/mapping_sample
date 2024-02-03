@@ -18,13 +18,13 @@ public class Report {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @JoinColumn(name = "content")
+    @Column(name = "content")
     private String content;
 
-    @JoinColumn(name = "created_date")
+    @Column(name = "created_date")
     private LocalDate created_date;
 
-    @JoinColumn(name = "last_modified")
+    @Column(name = "last_modified")
     private LocalDate last_modified;
 
 }

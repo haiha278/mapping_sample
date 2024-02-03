@@ -93,4 +93,20 @@ public class User {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
     private List<User_Wallet> user_wallet_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<Post> posts;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "mentor_id")
+    private List<Support> mentor_support_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "mentee_id")
+    private List<Support> mentee_support_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<Denomination_Transaction> denomination_transaction_List;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.MERGE, mappedBy = "user")
+    private List<Withdrawal_Request> withdrawal_request_List;
+
 }
